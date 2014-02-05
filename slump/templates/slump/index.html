@@ -1,0 +1,25 @@
+<html>
+<head>
+<style>
+.center
+{
+font-family:Calibri; text-align:center; margin-top:100px;
+}
+</style>
+</head>
+
+<body>
+<div class=center>
+<p style="font-size:40px;">
+Vad ska person X göra?
+</p>
+<form action={% url 'result' %} method="post"> {% csrf_token %}
+{{form.desc}}
+<input type="submit" value="slumpa X" style="height:35px;">
+</form>
+</div>
+<p class=center style="font-size:20px;">
+<a href="history/">Kolla tidigare slumpningar</a>
+</p>
+</body>
+</html>

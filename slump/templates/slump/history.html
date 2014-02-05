@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+.center
+{
+font-family:Calibri; text-align:center; margin-top:100px;
+}
+table
+{width=100%;
+    }
+</style>
+</head>
+
+<body>
+<div class=center>
+<p font-size:25px>
+Dessa tasks har tidigare lottats ut:
+</p>
+<table border="1" align=center <style="width:60px; height" >
+<tr><th>Task</th><th>Dude</th><tr>
+{%for t in tasks%}
+<tr><td>{{t.desc}}</td><td>{{t.dude.name}}</td><tr>
+{% endfor %}
+</table>
+-->
+<br><br>
+<table border="1" align=center <style="width:60px; height" >
+<tr><th>Dude</th><th>Number of tasks</th><tr>
+{%for c in counts%}
+<tr><td>{%Dude.objects.get()%}</td><td>{{c.nroftasks}}</td><tr>
+{% endfor %}
+</table>
+</--
+
+<p>
+<a href="/slump">Tillbaka till start</a>
+</p>
+</div>
+
+</body>
+</html>
+
+
+
